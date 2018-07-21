@@ -47,7 +47,8 @@
 (defui AppMain
   Object
   (render [this]
-          (html [:div "hehehe"])))
+          (html [:div {:class "container"}
+                 [:p {:class "text-center"} "Ist des ein geiler Scheiß"] ])))
 
 #_(def app (om/factory AppMain))
 
