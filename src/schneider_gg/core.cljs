@@ -1,7 +1,8 @@
 (ns schneider-gg.core
   (:require [goog.dom :as gdom]
             [om.next :as om :refer-macros [defui]]
-            [om.dom :as dom]))
+            [om.dom :as dom]
+            [sablono.core :as html :refer-macros [html]]))
 
 (enable-console-print!)
 
@@ -43,8 +44,13 @@
 
 ;;;; ##################
 
-(def app (om/factory AppMain))
+(defui AppMain
+  Object
+  (render [this]
+          (html [:div "hehehe"])))
+
+#_(def app (om/factory AppMain))
 
 (defn init []
   (om/add-root! reconciler
-                Counter (gdom/getElement "app")))
+                AppMain (gdom/getElement "app")))

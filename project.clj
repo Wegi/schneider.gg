@@ -3,8 +3,9 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.10.339"]
-                 [org.omcljs/om "1.0.0-alpha34"]
-                 [figwheel-sidecar "0.5.16" :scope "test"]]
+                 [org.omcljs/om "1.0.0-beta4"]
+                 [figwheel-sidecar "0.5.16" :scope "test"]
+                 [sablono "0.8.4"]]
 
   :plugins [[lein-figwheel "0.5.16"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
@@ -26,7 +27,7 @@
                                :open-urls ["http://localhost:3449/index.html"]
                                }
 
-                :compiler     {:main                 argyou-homepage.core
+                :compiler     {:main                 schneider-gg.core
                                :asset-path           "js/compiled/out"
                                :output-to            "resources/public/js/compiled/schneider.js"
                                :output-dir           "resources/public/js/compiled/out"
@@ -38,7 +39,7 @@
                 :source-paths ["src"]
                 :compiler     {:output-to     "resources/public/js/compiled/schneider.js"
                                :output-dir    "resources/public/js/compiled/min/out"
-                               :main          argyou-homepage.core
+                               :main          schneider-gg.core
                                :optimizations :advanced
                                :pretty-print  false}}]}
 
